@@ -4,7 +4,9 @@ import './Die.css';
 
 class Die extends Component {
     render() {
-        return <i className={`Die fas fa-dice-${this.props.face}`}></i>
+        const isRolling = this.props.rolling? 'rolling': ''
+        const clsName = `Die fas fa-dice-${this.props.face} ${isRolling}`
+        return <i className={clsName}></i>
     }
 }
 
